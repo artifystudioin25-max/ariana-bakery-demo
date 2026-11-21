@@ -1,0 +1,556 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+<meta name="color-scheme" content="light dark" />
+<meta name="description" content="Ariana Bakery — fresh bread, pastries and celebration cakes baked daily in Cheetham Hill, Manchester. Order on WhatsApp." />
+<meta property="og:title" content="Ariana Bakery — Fresh Bakes in Cheetham Hill, Manchester" />
+<meta property="og:description" content="Fresh bread, pastries and celebration cakes baked daily in Cheetham Hill, Manchester. Order on WhatsApp." />
+<meta property="og:type" content="website" />
+<meta property="og:url" content="https://ariana.creativeartifystudio.com/" />
+<meta property="og:image" content="https://ariana.creativeartifystudio.com/assets/hero.jpg" />
+<meta name="twitter:card" content="summary_large_image" />
+<link rel="icon" href="data:," />
+<title>Ariana Bakery — Fresh Bakes in Cheetham Hill, Manchester</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,500;0,700;0,800;1,500;1,600&family=DM+Sans:opsz,wght@9..40,400;9..40,500;9..40,700&family=Caveat:wght@600;700&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --bg:#FFF9F1; --bg2:#FFF3E2; --surface:#FFFFFF; --surface2:#FEF6EA;
+    --ink:#2A1608; --ink2:#5C4633; --muted:#8A7360;
+    --brand:#B84A12; --brand-dark:#8F3609; --brand-soft:#FDEBD8;
+    --gold:#C98A1B; --green:#1FA855; --green-dark:#128040;
+    --line:#F0DEC8; --shadow:0 18px 40px rgba(90,45,5,.13);
+    --radius:20px;
+  }
+  @media (prefers-color-scheme: dark){
+    :root{
+      --bg:#1D1108; --bg2:#251709; --surface:#2B1A0E; --surface2:#33200F;
+      --ink:#FFF3E2; --ink2:#E8D2B8; --muted:#B99F83;
+      --brand:#FF8A3D; --brand-dark:#FFB37A; --brand-soft:#3D2410;
+      --gold:#E8B34B; --line:#45301A; --shadow:0 18px 40px rgba(0,0,0,.45);
+    }
+  }
+  *{box-sizing:border-box}
+  html{scroll-behavior:smooth}
+  body{margin:0;font-family:"DM Sans",system-ui,sans-serif;background:var(--bg);color:var(--ink);line-height:1.6;-webkit-font-smoothing:antialiased}
+  img{max-width:100%;display:block}
+  a{color:inherit}
+  button,[role="button"],select,summary,input{ min-height:44px }
+  .wrap{width:min(1180px,100% - 40px);margin-inline:auto}
+  @media(max-width:560px){.wrap{width:calc(100% - 32px)}}
+
+  /* NAV */
+  .nav{position:sticky;top:0;z-index:50;background:color-mix(in srgb, var(--bg) 88%, transparent);backdrop-filter:blur(14px);border-bottom:1px solid var(--line)}
+  .nav-in{display:flex;align-items:center;justify-content:space-between;gap:16px;padding:12px 0}
+  .logo{display:flex;align-items:center;gap:11px;text-decoration:none}
+  .logo-mark{width:44px;height:44px;border-radius:50%;background:var(--brand);color:#fff;display:grid;place-items:center;font-family:"Playfair Display",serif;font-weight:800;font-size:22px;flex:none;box-shadow:0 6px 16px rgba(184,74,18,.35)}
+  .logo b{font-family:"Playfair Display",serif;font-size:21px;line-height:1;display:block;letter-spacing:.2px}
+  .logo span{font-size:11px;letter-spacing:.16em;text-transform:uppercase;color:var(--muted);font-weight:700}
+  .nav-links{display:flex;gap:28px;align-items:center}
+  .nav-links a{text-decoration:none;font-weight:600;font-size:15px;color:var(--ink2)}
+  .nav-links a:hover{color:var(--brand)}
+  @media(max-width:820px){.nav-links a{display:none}}
+  .btn{display:inline-flex;align-items:center;justify-content:center;gap:9px;border:none;cursor:pointer;text-decoration:none;font-weight:700;font-size:15px;padding:13px 22px;border-radius:999px;transition:.2s;white-space:nowrap}
+  .btn:active{transform:scale(.98)}
+  .btn-wa{background:var(--green);color:#fff;box-shadow:0 10px 22px rgba(31,168,85,.32)}
+  .btn-wa:hover{background:var(--green-dark)}
+  .btn-brand{background:var(--brand);color:#fff;box-shadow:0 10px 22px rgba(184,74,18,.3)}
+  .btn-brand:hover{background:var(--brand-dark)}
+  .btn-ghost{background:var(--surface);color:var(--ink);border:1.5px solid var(--line)}
+  .btn-sm{padding:10px 18px;font-size:14px}
+
+  /* HERO */
+  .hero{position:relative;overflow:hidden;background:var(--bg2)}
+  .hero-grid{display:grid;grid-template-columns:1.05fr .95fr;gap:44px;align-items:center;padding:54px 0 64px}
+  @media(max-width:900px){.hero-grid{grid-template-columns:1fr;padding:34px 0 44px;gap:28px}}
+  .pill{display:inline-flex;align-items:center;gap:8px;background:var(--surface);border:1px solid var(--line);padding:7px 14px;border-radius:999px;font-size:13px;font-weight:700;color:var(--ink2)}
+  .dot{width:9px;height:9px;border-radius:50%;background:var(--green);flex:none}
+  .dot.closed{background:#D64545}
+  h1{font-family:"Playfair Display",serif;font-size:clamp(42px,6.2vw,68px);line-height:.98;margin:18px 0 16px;font-weight:800;letter-spacing:-.5px}
+  h1 em{color:var(--brand);font-style:italic;font-weight:600}
+  .hero p.lead{font-size:18px;color:var(--ink2);max-width:52ch;margin:0 0 26px}
+  .hero-ctas{display:flex;gap:12px;flex-wrap:wrap}
+  .hero-meta{display:flex;gap:22px;flex-wrap:wrap;margin-top:28px;padding-top:22px;border-top:1px dashed var(--line)}
+  .hero-meta div b{display:block;font-family:"Playfair Display",serif;font-size:20px;line-height:1.1}
+  .hero-meta div span{font-size:13px;color:var(--muted);font-weight:600}
+  .hero-media{position:relative}
+  .hero-media img.main{width:100%;height:520px;object-fit:cover;border-radius:28px;box-shadow:var(--shadow)}
+  @media(max-width:900px){.hero-media img.main{height:340px}}
+  .float-card{position:absolute;left:-14px;bottom:22px;background:var(--surface);border:1px solid var(--line);border-radius:16px;padding:12px 16px;display:flex;gap:12px;align-items:center;box-shadow:var(--shadow);max-width:290px}
+  @media(max-width:560px){.float-card{left:10px;bottom:10px}}
+  .float-card img{width:52px;height:52px;border-radius:12px;object-fit:cover}
+  .float-card b{font-size:14px;line-height:1.25;display:block}
+  .float-card span{font-size:12.5px;color:var(--muted)}
+  .hand{font-family:"Caveat",cursive;font-size:24px;color:var(--brand);transform:rotate(-3deg);display:inline-block}
+
+  /* MARQUEE */
+  .marquee{background:var(--ink);color:var(--bg);overflow:hidden;padding:13px 0}
+  @media (prefers-color-scheme: dark){.marquee{background:#0F0803;color:#FFE9C9}}
+  .marquee-track{display:flex;gap:0;width:max-content;animation:scroll 26s linear infinite;font-family:"Playfair Display",serif;font-size:16px;letter-spacing:.04em;white-space:nowrap}
+  .marquee-track span{padding:0 18px}
+  .marquee-track i{color:var(--gold);font-style:normal}
+  @keyframes scroll{to{transform:translateX(-50%)}}
+  @media (prefers-reduced-motion: reduce){.marquee-track{animation:none} html{scroll-behavior:auto}}
+
+  section{padding:72px 0}
+  @media(max-width:700px){section{padding:52px 0}}
+  .sec-head{max-width:640px;margin-bottom:34px}
+  .sec-head.center{margin-inline:auto;text-align:center}
+  .kicker{font-size:12.5px;letter-spacing:.18em;text-transform:uppercase;color:var(--brand);font-weight:800;margin:0 0 10px}
+  h2{font-family:"Playfair Display",serif;font-size:clamp(30px,4vw,44px);line-height:1.08;margin:0 0 12px;font-weight:800}
+  .sec-head p{color:var(--ink2);margin:0;font-size:16.5px}
+
+  /* BESTSELLERS */
+  .cards{display:grid;grid-template-columns:repeat(4,1fr);gap:18px}
+  @media(max-width:1000px){.cards{grid-template-columns:repeat(2,1fr)}}
+  @media(max-width:520px){.cards{grid-template-columns:1fr}}
+  .card{background:var(--surface);border:1px solid var(--line);border-radius:var(--radius);overflow:hidden;box-shadow:0 4px 14px rgba(90,45,5,.05)}
+  .card img{width:100%;height:190px;object-fit:cover}
+  .card-body{padding:18px}
+  .tag{display:inline-block;background:var(--brand-soft);color:var(--brand);font-size:11.5px;font-weight:800;letter-spacing:.06em;text-transform:uppercase;padding:4px 9px;border-radius:999px;margin-bottom:8px}
+  .card h3{margin:0 0 6px;font-size:17.5px;line-height:1.3}
+  .card p{margin:0 0 14px;color:var(--muted);font-size:14px;line-height:1.5}
+  .price-row{display:flex;justify-content:space-between;align-items:center}
+  .price{font-family:"Playfair Display",serif;font-weight:800;font-size:20px}
+  .price small{font-family:"DM Sans",sans-serif;font-weight:600;font-size:12px;color:var(--muted)}
+  .add{width:42px;height:42px;border-radius:50%;background:var(--brand);color:#fff;border:none;font-size:22px;cursor:pointer;display:grid;place-items:center;text-decoration:none;flex:none}
+  .add:hover{background:var(--brand-dark)}
+
+  /* STORY */
+  .story{background:var(--surface2);border-block:1px solid var(--line)}
+  .story-grid{display:grid;grid-template-columns:1fr 1fr;gap:44px;align-items:center}
+  @media(max-width:880px){.story-grid{grid-template-columns:1fr}}
+  .story-grid img{width:100%;height:440px;object-fit:cover;border-radius:24px;box-shadow:var(--shadow)}
+  .ticks{list-style:none;padding:0;margin:22px 0 0;display:grid;gap:13px}
+  .ticks li{display:flex;gap:12px;align-items:flex-start;font-weight:600;color:var(--ink2)}
+  .ticks li::before{content:"✓";width:26px;height:26px;flex:none;border-radius:50%;background:var(--brand);color:#fff;display:grid;place-items:center;font-size:14px;margin-top:1px}
+
+  /* MENU */
+  .tabs{display:flex;gap:9px;flex-wrap:wrap;margin-bottom:24px}
+  .tab{border:1.5px solid var(--line);background:var(--surface);color:var(--ink2);padding:11px 20px;border-radius:999px;font-weight:700;font-size:14.5px;cursor:pointer;font-family:inherit}
+  .tab.active{background:var(--ink);color:var(--bg);border-color:var(--ink)}
+  .menu-grid{display:grid;grid-template-columns:1fr 1fr;gap:14px 34px}
+  @media(max-width:760px){.menu-grid{grid-template-columns:1fr}}
+  .mi{display:flex;gap:14px;padding:15px 0;border-bottom:1px dashed var(--line);align-items:flex-start}
+  .mi:last-child{border-bottom:none}
+  .mi-main{flex:1;min-width:0}
+  .mi-top{display:flex;align-items:baseline;gap:10px}
+  .mi h3{margin:0;font-size:16.5px}
+  .mi .dots{flex:1;border-bottom:2px dotted var(--line);transform:translateY(-4px)}
+  .mi .p{font-family:"Playfair Display",serif;font-weight:800;font-size:17px;white-space:nowrap}
+  .mi p{margin:4px 0 0;color:var(--muted);font-size:13.5px}
+  .badge{font-size:10.5px;font-weight:800;letter-spacing:.05em;text-transform:uppercase;background:#EAF7EE;color:#137A3A;padding:3px 7px;border-radius:99px;white-space:nowrap}
+  @media (prefers-color-scheme: dark){.badge{background:#12351D;color:#7FE3A0}}
+  .menu-note{margin-top:22px;background:var(--brand-soft);border-radius:14px;padding:16px 18px;font-size:14.5px;color:var(--ink2);display:flex;gap:12px;flex-wrap:wrap;justify-content:space-between;align-items:center}
+
+  /* CAKE BUILDER */
+  .builder{background:var(--ink);color:#FFF6E8;border-radius:28px;padding:38px;display:grid;grid-template-columns:1fr 1fr;gap:38px;overflow:hidden;position:relative}
+  @media(max-width:880px){.builder{grid-template-columns:1fr;padding:26px}}
+  @media (prefers-color-scheme: dark){.builder{background:#0F0803;border:1px solid var(--line)}}
+  .builder h2{color:#fff}
+  .builder p{color:#E9D6BC}
+  .builder img{width:100%;height:100%;min-height:280px;object-fit:cover;border-radius:18px}
+  .field{margin-bottom:16px}
+  .field label{display:block;font-size:13px;font-weight:800;letter-spacing:.07em;text-transform:uppercase;color:#FFD9A8;margin-bottom:8px}
+  .chips{display:flex;flex-wrap:wrap;gap:8px}
+  .chip{border:1.5px solid rgba(255,255,255,.28);background:transparent;color:#FFF6E8;padding:9px 15px;border-radius:999px;cursor:pointer;font-weight:600;font-size:14px;font-family:inherit;min-height:40px}
+  .chip.sel{background:#fff;color:#2A1608;border-color:#fff}
+  .builder input[type="date"], .builder input[type="text"]{width:100%;background:rgba(255,255,255,.09);border:1.5px solid rgba(255,255,255,.25);color:#fff;border-radius:12px;padding:12px 14px;font-family:inherit;font-size:15px;color-scheme:dark}
+  .est{display:flex;justify-content:space-between;align-items:center;background:rgba(255,255,255,.08);border-radius:14px;padding:15px 17px;margin:20px 0}
+  .est b{font-family:"Playfair Display",serif;font-size:26px}
+  .est span{font-size:13px;color:#E9D6BC}
+
+  /* GALLERY */
+  .gallery{display:grid;grid-template-columns:repeat(4,1fr);gap:14px}
+  @media(max-width:900px){.gallery{grid-template-columns:repeat(2,1fr)}}
+  .gallery figure{margin:0;border-radius:18px;overflow:hidden;position:relative}
+  .gallery img{width:100%;height:250px;object-fit:cover;transition:transform .5s}
+  .gallery figure:hover img{transform:scale(1.05)}
+  .gallery figcaption{position:absolute;left:12px;bottom:12px;background:rgba(20,10,2,.72);color:#fff;font-size:13px;font-weight:700;padding:6px 11px;border-radius:999px;backdrop-filter:blur(4px)}
+  @media (prefers-reduced-motion: reduce){.gallery img{transition:none}}
+
+  /* VISIT */
+  .visit-grid{display:grid;grid-template-columns:1.1fr .9fr;gap:20px}
+  @media(max-width:860px){.visit-grid{grid-template-columns:1fr}}
+  .panel{background:var(--surface);border:1px solid var(--line);border-radius:var(--radius);padding:26px}
+  .panel h3{font-family:"Playfair Display",serif;font-size:22px;margin:0 0 14px}
+  .rowline{display:flex;gap:13px;padding:11px 0;border-bottom:1px dashed var(--line);font-size:15px}
+  .rowline:last-child{border:none}
+  .rowline .ic{font-size:19px;line-height:1.3}
+  .hours{width:100%;border-collapse:collapse;font-size:15px}
+  .hours td{padding:9px 0;border-bottom:1px dashed var(--line)}
+  .hours tr:last-child td{border:none}
+  .hours td:last-child{text-align:right;font-weight:700}
+  .today{color:var(--brand);font-weight:800}
+
+  footer{background:var(--ink);color:#EADBC4;padding:44px 0 30px;margin-top:0}
+  @media (prefers-color-scheme: dark){footer{background:#0F0803;border-top:1px solid var(--line)}}
+  footer .fgrid{display:flex;justify-content:space-between;gap:28px;flex-wrap:wrap;padding-bottom:26px;border-bottom:1px solid rgba(255,255,255,.14)}
+  footer a{color:#FFD9A8}
+  .credit{padding-top:20px;font-size:13px;color:#B99F83;display:flex;justify-content:space-between;gap:14px;flex-wrap:wrap}
+
+  .wa-float{position:fixed;right:18px;bottom:18px;z-index:60;width:60px;height:60px;border-radius:50%;background:var(--green);display:grid;place-items:center;box-shadow:0 14px 30px rgba(18,128,64,.4);text-decoration:none}
+  .wa-float svg{width:30px;height:30px;fill:#fff}
+  .reveal{opacity:1}
+  .demo-note{font-size:13px;color:var(--muted);background:var(--surface);border:1px dashed var(--line);border-radius:10px;padding:9px 13px;display:inline-block;margin-top:14px}
+</style>
+</head>
+<body>
+
+<header class="nav">
+  <div class="wrap nav-in">
+    <a class="logo" href="#top" aria-label="Ariana Bakery home">
+      <span class="logo-mark">A</span>
+      <span><b>Ariana Bakery</b><span>Cheetham Hill · Manchester</span></span>
+    </a>
+    <nav class="nav-links" aria-label="Main">
+      <a href="#menu">Menu</a>
+      <a href="#story">Our Bakery</a>
+      <a href="#cakes">Celebration Cakes</a>
+      <a href="#visit">Visit Us</a>
+      <a class="btn btn-wa btn-sm" href="https://wa.me/447757182530?text=Hi%20Ariana%20Bakery!%20I%27d%20like%20to%20place%20an%20order." target="_blank" rel="noopener">Order on WhatsApp</a>
+    </nav>
+  </div>
+</header>
+
+<main id="top">
+  <!-- HERO -->
+  <div class="hero">
+    <div class="wrap hero-grid">
+      <div>
+        <span class="pill"><span class="dot" id="statusDot"></span><span id="statusText">Open today · 9:00 AM – 8:00 PM</span></span>
+        <h1>Warm bread,<br>fresh from the oven — <em>every morning.</em></h1>
+        <p class="lead">Ariana Bakery is Cheetham Hill's neighbourhood bakery on Cheetham Hill Road. Crusty loaves, flaky pastries and celebration cakes, baked in-house daily and ready to order on WhatsApp.</p>
+        <div class="hero-ctas">
+          <a class="btn btn-wa" href="https://wa.me/447757182530?text=Hi%20Ariana%20Bakery!%20I%27d%20like%20to%20place%20an%20order." target="_blank" rel="noopener">
+            <svg width="19" height="19" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2a10 10 0 0 0-8.6 15.1L2 22l5-1.3A10 10 0 1 0 12 2Zm5.2 14.2c-.2.6-1.3 1.2-1.8 1.2-.5.1-1 .2-3.4-.7-2.9-1.2-4.7-4.1-4.9-4.3-.1-.2-1.1-1.5-1.1-2.9s.7-2 1-2.3c.2-.3.5-.3.7-.3h.5c.2 0 .4 0 .6.5l.9 2.1c.1.2.1.4 0 .6l-.4.6-.4.5c-.1.1-.3.3-.1.6.2.3.8 1.4 1.8 2.2 1.2 1.1 2.3 1.5 2.6 1.6.3.1.5.1.7-.1l1-1.2c.2-.3.4-.2.7-.1l2.1 1c.3.2.5.3.6.4 0 .1 0 .7-.2 1.2Z"/></svg>
+            Order on WhatsApp
+          </a>
+          <a class="btn btn-ghost" href="#menu">See today's menu ↓</a>
+        </div>
+        <div class="hero-meta">
+          <div><b>7 days</b><span>Open every day, 9am–8pm</span></div>
+          <div><b>Baked daily</b><span>Fresh loaves every morning</span></div>
+          <div><b>Custom cakes</b><span>Made to order for any occasion</span></div>
+        </div>
+      </div>
+      <div class="hero-media">
+        <img class="main" src="assets/hero.jpg" alt="A basket of freshly baked artisan breads, baguettes and loaves at Ariana Bakery" />
+        <div class="float-card">
+          <img src="assets/croissant.jpg" alt="Golden butter croissants" />
+          <div><b>Butter Croissants</b><span>Flaky, golden — baked this morning · £2.80</span></div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="marquee" aria-hidden="true">
+    <div class="marquee-track" id="marquee">
+      <span>Fresh Sourdough <i>✦</i></span><span>Butter Croissants <i>✦</i></span><span>Custom Birthday Cakes <i>✦</i></span><span>Seeded Loaves <i>✦</i></span><span>Chocolate Chip Cookies <i>✦</i></span><span>Baked Fresh Daily in Cheetham Hill <i>✦</i></span>
+    </div>
+  </div>
+
+  <!-- BESTSELLERS -->
+  <section id="bestsellers">
+    <div class="wrap">
+      <div class="sec-head reveal">
+        <p class="kicker">Loved by locals</p>
+        <h2>Today's bestsellers</h2>
+        <p>The bakes Cheetham Hill keeps coming back for. Tap + to order any of them on WhatsApp in seconds.</p>
+      </div>
+      <div class="cards">
+        <article class="card reveal">
+          <img src="assets/bread.jpg" alt="Crusty seeded artisan loaves with wheat" />
+          <div class="card-body">
+            <span class="tag">Baked daily</span>
+            <h3>Artisan Seeded Loaf</h3>
+            <p>Slow-fermented, stone-baked and rolled in toasted seeds. Perfect for toast and sandwiches.</p>
+            <div class="price-row"><span class="price">£4.50</span><a class="add" aria-label="Order Artisan Seeded Loaf on WhatsApp" href="https://wa.me/447757182530?text=Hi%20Ariana%20Bakery!%20I%27d%20like%20to%20order%20an%20Artisan%20Seeded%20Loaf%20(%C2%A34.50)." target="_blank" rel="noopener">+</a></div>
+          </div>
+        </article>
+        <article class="card reveal">
+          <img src="assets/croissant.jpg" alt="Flaky golden croissants dusted with sugar" />
+          <div class="card-body">
+            <span class="tag">Morning favourite</span>
+            <h3>Butter Croissant</h3>
+            <p>27 layers of flaky, golden pastry made with real butter. Best eaten still warm.</p>
+            <div class="price-row"><span class="price">£2.80</span><a class="add" aria-label="Order Butter Croissant on WhatsApp" href="https://wa.me/447757182530?text=Hi%20Ariana%20Bakery!%20I%27d%20like%20to%20order%20Butter%20Croissants%20(%C2%A32.80%20each)." target="_blank" rel="noopener">+</a></div>
+          </div>
+        </article>
+        <article class="card reveal">
+          <img src="assets/cake.jpg" alt="Chocolate drip celebration cake with buttercream swirls" />
+          <div class="card-body">
+            <span class="tag">Made to order</span>
+            <h3>Chocolate Drip Cake</h3>
+            <p>Rich chocolate sponge, glossy drip and buttercream swirls. Our most-ordered celebration cake.</p>
+            <div class="price-row"><span class="price">£28 <small>from</small></span><a class="add" aria-label="Order Chocolate Drip Cake on WhatsApp" href="https://wa.me/447757182530?text=Hi%20Ariana%20Bakery!%20I%27d%20like%20to%20order%20a%20Chocolate%20Drip%20Cake." target="_blank" rel="noopener">+</a></div>
+          </div>
+        </article>
+        <article class="card reveal">
+          <img src="assets/pastry.jpg" alt="A bowl of chocolate chip cookies on parchment paper" />
+          <div class="card-body">
+            <span class="tag">Kids love them</span>
+            <h3>Choc Chip Cookies</h3>
+            <p>Crisp edges, soft centres and proper chocolate chips in every bite. Sold in packs of four.</p>
+            <div class="price-row"><span class="price">£3.50 <small>/ pack</small></span><a class="add" aria-label="Order Choc Chip Cookies on WhatsApp" href="https://wa.me/447757182530?text=Hi%20Ariana%20Bakery!%20I%27d%20like%20to%20order%20Choc%20Chip%20Cookies%20(%C2%A33.50%20per%20pack)." target="_blank" rel="noopener">+</a></div>
+          </div>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- STORY -->
+  <section class="story" id="story">
+    <div class="wrap story-grid">
+      <img class="reveal" src="assets/counter.jpg" alt="The Ariana Bakery counter filled with fresh breads, rolls and pastries" />
+      <div class="reveal">
+        <p class="kicker">Our bakery</p>
+        <h2>A proper neighbourhood bakery, in the heart of Cheetham Hill</h2>
+        <p style="color:var(--ink2)">Every morning starts before sunrise at Ariana. Our bakers mix, proof and bake on site at Progress Buildings on Cheetham Hill Road — so what you take home is hours old, never days. From your daily loaf to the cake that marks your family's biggest days, everything is made here, by hand.</p>
+        <ul class="ticks">
+          <li>Bread and pastries baked fresh on site, every single day</li>
+          <li>Celebration cakes made to order — birthdays, weddings &amp; Eid</li>
+          <li>Order ahead on WhatsApp and collect in store — no waiting</li>
+          <li>Open 7 days a week, 9 in the morning to 8 at night</li>
+        </ul>
+        <p style="margin-top:22px"><span class="hand">— baked with love, right here in M8</span></p>
+      </div>
+    </div>
+  </section>
+
+  <!-- MENU -->
+  <section id="menu">
+    <div class="wrap">
+      <div class="sec-head reveal">
+        <p class="kicker">The menu</p>
+        <h2>What are you craving today?</h2>
+        <p>A taste of what's on the counter. The full range changes with the day's bake — message us for today's specials.</p>
+        <span class="demo-note">Demo menu — sample items &amp; prices shown for illustration; Ariana Bakery can update every item, price and photo before launch.</span>
+      </div>
+      <div class="tabs" role="tablist" aria-label="Menu categories">
+        <button class="tab active" data-cat="all" role="tab">Everything</button>
+        <button class="tab" data-cat="breads" role="tab">Breads</button>
+        <button class="tab" data-cat="pastries" role="tab">Pastries</button>
+        <button class="tab" data-cat="cakes" role="tab">Cakes &amp; Sweets</button>
+      </div>
+      <div class="menu-grid" id="menuGrid">
+        <div class="mi" data-cat="breads"><div class="mi-main"><div class="mi-top"><h3>Classic Sourdough</h3><span class="badge">Bestseller</span><span class="dots"></span><span class="p">£4.20</span></div><p>Tangy, crusty and slow-fermented for 24 hours.</p></div></div>
+        <div class="mi" data-cat="breads"><div class="mi-main"><div class="mi-top"><h3>Artisan Seeded Loaf</h3><span class="dots"></span><span class="p">£4.50</span></div><p>Sunflower and sesame seeds, stone-baked.</p></div></div>
+        <div class="mi" data-cat="breads"><div class="mi-main"><div class="mi-top"><h3>White Farmhouse Loaf</h3><span class="dots"></span><span class="p">£3.20</span></div><p>Soft, fluffy and made for proper sandwiches.</p></div></div>
+        <div class="mi" data-cat="breads"><div class="mi-main"><div class="mi-top"><h3>French Baguette</h3><span class="dots"></span><span class="p">£1.80</span></div><p>Crackly crust, baked twice a day.</p></div></div>
+        <div class="mi" data-cat="breads"><div class="mi-main"><div class="mi-top"><h3>Soft Bread Rolls (×4)</h3><span class="dots"></span><span class="p">£2.40</span></div><p>Pillowy rolls — breakfast and burgers alike.</p></div></div>
+        <div class="mi" data-cat="breads"><div class="mi-main"><div class="mi-top"><h3>Wholemeal Loaf</h3><span class="dots"></span><span class="p">£3.60</span></div><p>Hearty, wholesome and full of fibre.</p></div></div>
+
+        <div class="mi" data-cat="pastries"><div class="mi-main"><div class="mi-top"><h3>Butter Croissant</h3><span class="badge">Bestseller</span><span class="dots"></span><span class="p">£2.80</span></div><p>Flaky layers, real butter, golden finish.</p></div></div>
+        <div class="mi" data-cat="pastries"><div class="mi-main"><div class="mi-top"><h3>Chocolate Croissant</h3><span class="dots"></span><span class="p">£3.10</span></div><p>Two bars of dark chocolate inside.</p></div></div>
+        <div class="mi" data-cat="pastries"><div class="mi-main"><div class="mi-top"><h3>Almond Croissant</h3><span class="dots"></span><span class="p">£3.60</span></div><p>Frangipane-filled, topped with flaked almonds.</p></div></div>
+        <div class="mi" data-cat="pastries"><div class="mi-main"><div class="mi-top"><h3>Cinnamon Swirl</h3><span class="dots"></span><span class="p">£2.90</span></div><p>Warm spice, soft dough, light glaze.</p></div></div>
+        <div class="mi" data-cat="pastries"><div class="mi-main"><div class="mi-top"><h3>Cheese Twist</h3><span class="dots"></span><span class="p">£2.70</span></div><p>Savoury, cheesy and dangerously snackable.</p></div></div>
+        <div class="mi" data-cat="pastries"><div class="mi-main"><div class="mi-top"><h3>Fruit Danish</h3><span class="dots"></span><span class="p">£3.00</span></div><p>Seasonal fruit on vanilla custard pastry.</p></div></div>
+
+        <div class="mi" data-cat="cakes"><div class="mi-main"><div class="mi-top"><h3>Chocolate Drip Cake</h3><span class="badge">Made to order</span><span class="dots"></span><span class="p">from £28</span></div><p>Our signature celebration cake — any message on top.</p></div></div>
+        <div class="mi" data-cat="cakes"><div class="mi-main"><div class="mi-top"><h3>Vanilla Sprinkle Cupcakes (×6)</h3><span class="dots"></span><span class="p">£9.00</span></div><p>Party-ready and loved by kids.</p></div></div>
+        <div class="mi" data-cat="cakes"><div class="mi-main"><div class="mi-top"><h3>Choc Chip Cookies (×4)</h3><span class="dots"></span><span class="p">£3.50</span></div><p>Crisp edges, gooey middle.</p></div></div>
+        <div class="mi" data-cat="cakes"><div class="mi-main"><div class="mi-top"><h3>Victoria Sponge Slice</h3><span class="dots"></span><span class="p">£3.20</span></div><p>Jam, cream and a dusting of sugar.</p></div></div>
+        <div class="mi" data-cat="cakes"><div class="mi-main"><div class="mi-top"><h3>Red Velvet Slice</h3><span class="dots"></span><span class="p">£3.40</span></div><p>With smooth cream-cheese frosting.</p></div></div>
+        <div class="mi" data-cat="cakes"><div class="mi-main"><div class="mi-top"><h3>Custom Birthday Cake</h3><span class="badge">Made to order</span><span class="dots"></span><span class="p">from £25</span></div><p>Your flavour, your colours, your message. Order below.</p></div></div>
+      </div>
+      <div class="menu-note reveal">
+        <span>🍞 <b>Fresh-bake tip:</b> Loaves often sell out by mid-afternoon. Reserve yours on WhatsApp and we'll keep it aside.</span>
+        <a class="btn btn-brand btn-sm" href="https://wa.me/447757182530?text=Hi%20Ariana%20Bakery!%20What%27s%20fresh%20today%3F" target="_blank" rel="noopener">Ask what's fresh</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- CAKE BUILDER -->
+  <section id="cakes" style="padding-top:0">
+    <div class="wrap">
+      <div class="builder reveal">
+        <div>
+          <p class="kicker" style="color:#FFB37A">Celebration cakes</p>
+          <h2>Build your cake in 30 seconds</h2>
+          <p>Pick a size and flavour, tell us the date — we'll bake it fresh for your day. Send your choices straight to our WhatsApp and we'll confirm price and design.</p>
+          <img src="assets/cupcakes.jpg" alt="Colourful frosted cupcakes with sprinkles" style="margin-top:20px" />
+        </div>
+        <div>
+          <div class="field">
+            <label>1 · Cake size</label>
+            <div class="chips" id="sizeChips">
+              <button class="chip sel" data-size="Small (serves 8)" data-price="25">Small · serves 8</button>
+              <button class="chip" data-size="Medium (serves 14)" data-price="35">Medium · serves 14</button>
+              <button class="chip" data-size="Large (serves 22)" data-price="48">Large · serves 22</button>
+            </div>
+          </div>
+          <div class="field">
+            <label>2 · Flavour</label>
+            <div class="chips" id="flavourChips">
+              <button class="chip sel" data-flavour="Chocolate">Chocolate</button>
+              <button class="chip" data-flavour="Vanilla">Vanilla</button>
+              <button class="chip" data-flavour="Red Velvet">Red Velvet</button>
+              <button class="chip" data-flavour="Lemon">Lemon</button>
+              <button class="chip" data-flavour="Coffee">Coffee</button>
+            </div>
+          </div>
+          <div class="field">
+            <label for="cakeDate">3 · I need it on</label>
+            <input type="date" id="cakeDate" />
+          </div>
+          <div class="field">
+            <label for="cakeMsg">Message on the cake (optional)</label>
+            <input type="text" id="cakeMsg" placeholder='e.g. "Happy Birthday Aisha!"' maxlength="60" />
+          </div>
+          <div class="est"><span>Estimated price<br><small style="color:#B99F83">Final quote confirmed on WhatsApp</small></span><b id="estPrice">from £25</b></div>
+          <a class="btn btn-wa" id="cakeOrderBtn" style="width:100%" href="#" target="_blank" rel="noopener">Send my cake order on WhatsApp →</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- GALLERY -->
+  <section style="padding-top:0">
+    <div class="wrap">
+      <div class="sec-head center reveal">
+        <p class="kicker">From our oven</p>
+        <h2>Fresh out of the oven</h2>
+      </div>
+      <div class="gallery">
+        <figure class="reveal"><img src="assets/hero.jpg" alt="Basket of artisan breads" /><figcaption>Morning loaves</figcaption></figure>
+        <figure class="reveal"><img src="assets/croissant.jpg" alt="Golden croissants" /><figcaption>Butter croissants</figcaption></figure>
+        <figure class="reveal"><img src="assets/cake.jpg" alt="Chocolate drip cake" /><figcaption>Celebration cakes</figcaption></figure>
+        <figure class="reveal"><img src="assets/pastry.jpg" alt="Chocolate chip cookies" /><figcaption>Cookies, daily</figcaption></figure>
+      </div>
+    </div>
+  </section>
+
+  <!-- VISIT -->
+  <section id="visit" style="padding-top:0">
+    <div class="wrap">
+      <div class="sec-head reveal">
+        <p class="kicker">Visit us</p>
+        <h2>Find us on Cheetham Hill Road</h2>
+      </div>
+      <div class="visit-grid">
+        <div class="panel reveal">
+          <h3>Ariana Bakery</h3>
+          <div class="rowline"><span class="ic">📍</span><span><b>Progress Buildings, 491 Cheetham Hill Road</b><br>Manchester, M8 9HJ</span></div>
+          <div class="rowline"><span class="ic">💬</span><span>WhatsApp / Call: <a href="https://wa.me/447757182530" target="_blank" rel="noopener"><b>+44 7757 182530</b></a></span></div>
+          <div class="rowline"><span class="ic">🕘</span><span id="visitStatus">Open today until 8:00 PM — pop in!</span></div>
+          <div style="display:flex;gap:10px;flex-wrap:wrap;margin-top:18px">
+            <a class="btn btn-brand btn-sm" href="https://www.google.com/maps/search/?api=1&query=Ariana+Bakery+491+Cheetham+Hill+Road+Manchester+M8+9HJ" target="_blank" rel="noopener">Get Directions →</a>
+            <a class="btn btn-wa btn-sm" href="https://wa.me/447757182530?text=Hi%20Ariana%20Bakery!" target="_blank" rel="noopener">Message Us</a>
+          </div>
+        </div>
+        <div class="panel reveal">
+          <h3>Opening hours</h3>
+          <table class="hours" id="hoursTable">
+            <tr data-day="1"><td>Monday</td><td>9:00 AM – 8:00 PM</td></tr>
+            <tr data-day="2"><td>Tuesday</td><td>9:00 AM – 8:00 PM</td></tr>
+            <tr data-day="3"><td>Wednesday</td><td>9:00 AM – 8:00 PM</td></tr>
+            <tr data-day="4"><td>Thursday</td><td>9:00 AM – 8:00 PM</td></tr>
+            <tr data-day="5"><td>Friday</td><td>9:00 AM – 8:00 PM</td></tr>
+            <tr data-day="6"><td>Saturday</td><td>9:00 AM – 8:00 PM</td></tr>
+            <tr data-day="0"><td>Sunday</td><td>9:00 AM – 8:00 PM</td></tr>
+          </table>
+        </div>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer>
+  <div class="wrap">
+    <div class="fgrid">
+      <div style="max-width:340px">
+        <div style="font-family:'Playfair Display',serif;font-size:24px;font-weight:800;color:#fff;margin-bottom:8px">Ariana Bakery</div>
+        <p style="margin:0;font-size:14.5px">Fresh bread, pastries and celebration cakes — baked daily in Cheetham Hill, Manchester.</p>
+      </div>
+      <div>
+        <b style="color:#fff;display:block;margin-bottom:10px">Visit</b>
+        <p style="margin:0;font-size:14.5px">Progress Buildings, 491 Cheetham Hill Road<br>Manchester, M8 9HJ<br>Open daily 9:00 AM – 8:00 PM</p>
+      </div>
+      <div>
+        <b style="color:#fff;display:block;margin-bottom:10px">Order</b>
+        <p style="margin:0;font-size:14.5px"><a href="https://wa.me/447757182530" target="_blank" rel="noopener">WhatsApp: +44 7757 182530</a><br><a href="#cakes">Custom cake builder</a><br><a href="#menu">Today's menu</a></p>
+      </div>
+    </div>
+    <div class="credit"><span>© Ariana Bakery, Manchester. All rights reserved.</span><span>Demo website crafted by <b>Artify Studio</b></span></div>
+  </div>
+</footer>
+
+<a class="wa-float" href="https://wa.me/447757182530?text=Hi%20Ariana%20Bakery!%20I%27d%20like%20to%20place%20an%20order." target="_blank" rel="noopener" aria-label="Chat with Ariana Bakery on WhatsApp">
+  <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2a10 10 0 0 0-8.6 15.1L2 22l5-1.3A10 10 0 1 0 12 2Zm5.2 14.2c-.2.6-1.3 1.2-1.8 1.2-.5.1-1 .2-3.4-.7-2.9-1.2-4.7-4.1-4.9-4.3-.1-.2-1.1-1.5-1.1-2.9s.7-2 1-2.3c.2-.3.5-.3.7-.3h.5c.2 0 .4 0 .6.5l.9 2.1c.1.2.1.4 0 .6l-.4.6-.4.5c-.1.1-.3.3-.1.6.2.3.8 1.4 1.8 2.2 1.2 1.1 2.3 1.5 2.6 1.6.3.1.5.1.7-.1l1-1.2c.2-.3.4-.2.7-.1l2.1 1c.3.2.5.3.6.4 0 .1 0 .7-.2 1.2Z"/></svg>
+</a>
+
+<script>
+// Duplicate marquee content for seamless loop
+(function(){ var t=document.getElementById('marquee'); t.innerHTML += t.innerHTML; })();
+
+// Open / closed status — Europe/London time, open 09:00–20:00 daily
+(function(){
+  try{
+    var now = new Date(new Date().toLocaleString('en-US',{timeZone:'Europe/London'}));
+    var mins = now.getHours()*60 + now.getMinutes();
+    var open = mins >= 540 && mins < 1200;
+    var dot = document.getElementById('statusDot'), txt = document.getElementById('statusText'), vs = document.getElementById('visitStatus');
+    if(open){ txt.textContent = 'Open now · Closes 8:00 PM today'; if(vs) vs.textContent = 'Open now until 8:00 PM — pop in!'; }
+    else{
+      dot.classList.add('closed');
+      txt.textContent = mins < 540 ? 'Opens today at 9:00 AM' : 'Closed · Opens 9:00 AM tomorrow';
+      if(vs) vs.textContent = mins < 540 ? 'We open today at 9:00 AM — see you soon!' : 'Closed now — we open at 9:00 AM tomorrow.';
+    }
+    var rows = document.querySelectorAll('#hoursTable tr');
+    rows.forEach(function(r){ if(parseInt(r.getAttribute('data-day'),10) === now.getDay()){ r.classList.add('today'); r.cells[0].textContent += ' · Today'; } });
+  }catch(e){}
+})();
+
+// Menu tabs
+(function(){
+  var tabs = document.querySelectorAll('.tab'), items = document.querySelectorAll('.mi');
+  tabs.forEach(function(tab){
+    tab.addEventListener('click', function(){
+      tabs.forEach(function(t){ t.classList.remove('active'); });
+      tab.classList.add('active');
+      var cat = tab.getAttribute('data-cat');
+      items.forEach(function(it){ it.style.display = (cat==='all' || it.getAttribute('data-cat')===cat) ? '' : 'none'; });
+    });
+  });
+})();
+
+// Cake builder -> WhatsApp
+(function(){
+  var size='Small (serves 8)', price=25, flavour='Chocolate';
+  var est=document.getElementById('estPrice'), btn=document.getElementById('cakeOrderBtn');
+  function bindChips(id, cb){
+    var chips=document.querySelectorAll('#'+id+' .chip');
+    chips.forEach(function(c){ c.addEventListener('click', function(){ chips.forEach(function(x){x.classList.remove('sel')}); c.classList.add('sel'); cb(c); update(); }); });
+  }
+  bindChips('sizeChips', function(c){ size=c.getAttribute('data-size'); price=parseInt(c.getAttribute('data-price'),10); });
+  bindChips('flavourChips', function(c){ flavour=c.getAttribute('data-flavour'); });
+  function update(){
+    est.textContent = 'from £' + price;
+    var date=document.getElementById('cakeDate').value, msg=document.getElementById('cakeMsg').value.trim();
+    var text = 'Hi Ariana Bakery! I would like to order a celebration cake.\n• Size: ' + size + '\n• Flavour: ' + flavour + (date ? '\n• Needed on: ' + date : '') + (msg ? '\n• Message on cake: "' + msg + '"' : '') + '\nEstimated price shown on your website: from £' + price + '. Please confirm — thank you!';
+    btn.href = 'https://wa.me/447757182530?text=' + encodeURIComponent(text);
+  }
+  document.getElementById('cakeDate').addEventListener('change', update);
+  document.getElementById('cakeMsg').addEventListener('input', update);
+  // Min date = tomorrow
+  var d=new Date(); d.setDate(d.getDate()+1);
+  document.getElementById('cakeDate').min = d.toISOString().split('T')[0];
+  update();
+})();
+
+// Reveal on scroll — content is always visible; animation is a polish layer only
+(function(){
+  var els=document.querySelectorAll('.reveal');
+  var reduce = window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+  if(reduce || !('IntersectionObserver' in window) || !document.body.animate) return;
+  var io=new IntersectionObserver(function(entries){ entries.forEach(function(en){ if(en.isIntersecting){ try{ en.target.animate([{opacity:0,transform:'translateY(16px)'},{opacity:1,transform:'translateY(0)'}],{duration:550,easing:'ease-out'}); }catch(e){} io.unobserve(en.target); } }); },{threshold:.08});
+  els.forEach(function(e){ io.observe(e); });
+})();
+</script>
+</body>
+</html>
